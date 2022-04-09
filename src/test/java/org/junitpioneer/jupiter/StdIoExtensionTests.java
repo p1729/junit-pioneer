@@ -56,7 +56,7 @@ public class StdIoExtensionTests {
 			app.write();
 
 			assertThat(out.capturedLines())
-					.containsExactly("the gracious light",
+					.containsExactly("Lo! in the orient when the gracious light",
 						"Lifts up his burning head, each under eye");
 		}
 
