@@ -91,6 +91,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          check_name: Test Report for ${{ matrix.os }}
           report_paths: '**/build/test-results/test/TEST-*.xml'
 
   # Code format check
