@@ -86,7 +86,7 @@ jobs:
           SONAR_TOKEN: "61ab2579215aa8a0024a2f9368fc1298fdecfd18"
         run: ./gradlew jacocoTestReport sonarqube --stacktrace -i
       - name: Test report
-        uses: mikepenz/action-junit-report@v3
+        uses: mikepenz/action-junit-report@v3.0.1
         if: always() # always report JUnit test result
         with:
           annotate_only: true
