@@ -88,6 +88,8 @@ jobs:
       - name: Test report
         uses: mikepenz/action-junit-report@v3.0.1
         if: always() # always report JUnit test result
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
 
