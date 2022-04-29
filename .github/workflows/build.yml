@@ -86,12 +86,12 @@ jobs:
           SONAR_TOKEN: "61ab2579215aa8a0024a2f9368fc1298fdecfd18"
         run: ./gradlew jacocoTestReport sonarqube --stacktrace -i
       - name: Test report
-        uses: mikepenz/action-junit-report@v3.0.1
+        uses: mikepenz/action-junit-report@v3.0.3
         if: always() # always report JUnit test result
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          check_name: Test Report for ${{ matrix.os }}
+          annotate_only: true
           report_paths: '**/build/test-results/test/TEST-*.xml'
 
   # Code format check
